@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Sentiment and Entity Extraction - Result</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Article Sentiment and Entity Extraction - Result</h1>
+        <h2>Article URL:</h2>
+        <p>{{ url }}</p>
+        
+        <h3>Sentiment:</h3>
+        <p>{{ sentiment }}</p>
+        
+        <h3>Extracted Entities:</h3>
+        <ul>
+            {% for entity in entities %}
+                <li>{{ entity[0] }} ({{ entity[1] }})</li>
+            {% endfor %}
+        </ul>
+        
+        <br>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
